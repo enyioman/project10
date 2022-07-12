@@ -51,6 +51,23 @@ server {
 ![Configuration](./media/reverse.png)
 
 
+Remove nginx default page and check that Nginx was correctly configured:
+
+```
+sudo rm -f /etc/nginx/sites-enabled/default
+sudo nginx -t
+```
+
+![Configuration ok](./media/nginxt.png)
+
+Navigate to `/etc/nginx/sites-enabled' and link the earlier configure default page:
+
+```
+sudo ln -s ../sites-available/load-balancer.conf .
+```
+
+![Configuration link](./media/viewlink.png)
+
 Restart NGINX service and check status:
 
 ```
@@ -58,13 +75,6 @@ sudo systemctl restart nginx
 udo systemctl status nginx
 ```
 
-Check that Nginx was correctly configured:
-
-```
-sudo nginx -t
-```
-
-![Configuration ok](./media/nginxt.png)
 
 ## Register a new domain name and connect to route 53
 
