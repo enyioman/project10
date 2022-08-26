@@ -1,16 +1,5 @@
 # Load Balancer Solution With Nginx and SSL/TLS
 
-Task:
-
-This project consists of two parts:
-
-- Configure Nginx as a Load Balancer
-- Register a new domain name and configure secured connection using SSL/TLS certificates.
-
-The target architecture is as follows:
-
-![Architecture](./media/archy.png)
-
 ## Configure Nginx As A Load Balancer
 
 In order to do this complete the following:
